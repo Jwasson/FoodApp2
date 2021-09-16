@@ -46,7 +46,7 @@ import {
 
 function LoginScreen () {
 
-//const [loggedIn, setloggedIn] = useState(false);
+const [loggedIn, setloggedIn] = useState(false);
 //const [userInfo, setuserInfo] = useState([]);
     async function signInWithGoogleAsync() {
         try {
@@ -111,6 +111,9 @@ function LoginScreen () {
         <View style = {styles.container}> 
             <Button title = "Sign In With Google"
              onPress = {()=> signInWithGoogle()}
+            />
+            <Button title = "I Logged In"
+             onPress = {()=> ()}
             />
         </View>
     );
