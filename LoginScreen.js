@@ -3,6 +3,7 @@ import React, {Component, useEffect, useState} from 'react';
 import 'react-native-gesture-handler';
 import firebase from 'firebase';
 //import auth from '@react-native-firebase/auth';
+//import * as GoogleSignIn from 'expo-google-sign-in';
 import * as Google from 'expo-google-app-auth'
 import {
   SafeAreaView,
@@ -35,8 +36,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
 });
-
-/*import {
+/*
+import {
     GoogleSignin,
     GoogleSigninButton,
     statusCodes,
@@ -103,8 +104,8 @@ function LoginScreen () {
         webClientId: '576903655121-895vgr72883r4a6h89k1mhfh9kt86s4b.apps.googleusercontent.com',
         offlineAccess: true, // if you want to access Google API on behalf of the user FROM YOUR SERVER
         });
-    }, []);
-   // }*/
+    }, []);*/
+   // }
 
     return(
         <View style = {styles.container}> 
@@ -136,8 +137,8 @@ function LoginScreen () {
             </ScrollView>
           </SafeAreaView>
         </>
-    );
-*/
+    );*/
+
 }
 
 export default LoginScreen;
