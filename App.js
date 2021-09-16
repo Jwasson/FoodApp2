@@ -13,6 +13,8 @@ import {
 } from 'react-native';
 
 import {createAppContainer, createSwitchNavigator} from 'react-navigation';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 //import auth from '@react-native-firebase/auth';
 //import { initializeApp } from 'firebase/app';
 //import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
@@ -22,8 +24,8 @@ import {createAppContainer, createSwitchNavigator} from 'react-navigation';
 
 
 
-	//need to take var1 in from user input somehow
-	//const var1 = '1648210'; for apple
+//need to take var1 in from user input somehow
+//const var1 = '1648210'; for apple
 //import * as Expo from 'expo';
 console.ignoredYellowBox = ['Warning:'];
 

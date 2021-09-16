@@ -5,6 +5,11 @@ import firebase from 'firebase';
 //import auth from '@react-native-firebase/auth';
 //import * as GoogleSignIn from 'expo-google-sign-in';
 import * as Google from 'expo-google-app-auth'
+import {createAppContainer, createSwitchNavigator} from 'react-navigation';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+
 import {
   SafeAreaView,
   ScrollView,
@@ -16,6 +21,11 @@ import {
   TextInput,
   Button,
 } from 'react-native';
+import { NavigationContext } from 'react-navigation';
+
+
+import CalScreen from './CalScreen';
+
 
 const styles = StyleSheet.create({
     input: {
@@ -44,10 +54,11 @@ import {
 } from 'react-native-google-signin';*/
 
 
-function LoginScreen () {
+function LoginScreen ({navigation}) {
 
-const [loggedIn, setloggedIn] = useState(false);
+//const [loggedIn, setloggedIn] = useState(false);
 //const [userInfo, setuserInfo] = useState([]);
+    const Stack = createStackNavigator();
     async function signInWithGoogleAsync() {
         try {
           const result = await Google.logInAsync({
@@ -112,8 +123,8 @@ const [loggedIn, setloggedIn] = useState(false);
             <Button title = "Sign In With Google"
              onPress = {()=> signInWithGoogle()}
             />
-            <Button title = "I Logged In"
-             onPress = {()=> ()}
+            <Button title = "Press This After Login"
+             onPress = {()=> navigation.navigate('CalScreen')}
             />
         </View>
     );
