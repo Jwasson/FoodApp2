@@ -22,16 +22,56 @@ const CalScreen = () => {
     const [foodName, setName] = useState(false);
     const styles = StyleSheet.create({
         input: {
-        height: 40,
-        margin: 12,
+        position: 'absolute', top: 89, left: 155, right: 0, bottom: 20,
+        height: 37,
+        width: "40%",
+        color: "blue",
+        margin: 24,
         borderWidth: 1,
+        borderColor: 'blue',
         padding: 10,
+        alignItems: 'center',
+        justifyContent: 'center',
       },
-        titles: {
+        titles1: {
+        position: 'absolute', top: 100, left: 25, right: 0, bottom: 0,
         height: 40,
         margin: 12,
+        color: "blue",
         borderWidth: 0,
         padding: 10,
+        alignItems: 'center',
+        justifyContent: 'center',
+        },
+        titles2: {
+        position: 'absolute', top: 200, left: 25, right: 0, bottom: 0,
+        height: 40,
+        margin: 12,
+        color: "blue",
+        borderWidth: 0,
+        padding: 10,
+        alignItems: 'center',
+        justifyContent: 'center',
+        },
+        titles3: {
+            position: 'absolute', top: 300, left: 25, right: 0, bottom: 0,
+            height: 40,
+            margin: 12,
+            color: "blue",
+            borderWidth: 0,
+            padding: 10,
+            alignItems: 'center',
+            justifyContent: 'center',
+        },
+        titles4: {
+            position: 'absolute', top: 400, left: 25, right: 0, bottom: 0,
+            height: 40,
+            margin: 12,
+            color: "blue",
+            borderWidth: 0,
+            padding: 10,
+            alignItems: 'center',
+            justifyContent: 'center',
         },
         container: {
             flex: 1,
@@ -59,16 +99,16 @@ const CalScreen = () => {
 
    return (
        <View>
-           <Text style = {styles.titles}> {'Enter Servings:'}</Text>
+           <Text style = {styles.titles1}> {'Enter Servings:'}</Text>
             <TextInput
                 style = {styles.input}
                 editable
                 //value = {serving} // this should make it update real time but it's not working - cant enter anything
                 onChangeText = {num => setServing(num)} //onChangeText is how you store user input 
             />
-            <Text style = {styles.titles}>{"Ingredient Name: "+foodName}</Text>
-            <Text style = {styles.titles}>{"Servings: "+serving}</Text>
-            <Text style = {styles.titles}>{"Kcals: "+serving*calories}</Text>
+            <Text style = {styles.titles2}>{"Ingredient Name: "+foodName}</Text>
+            <Text style = {styles.titles3}>{"Servings: "+serving}</Text>
+            <Text style = {styles.titles4}>{"Kcals: "+serving*calories}</Text>
             
             
             
