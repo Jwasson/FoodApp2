@@ -1,0 +1,14 @@
+com/qrcodescannerapp/ReactNativeFlipper.java
+ com.qrcodescannerapp.ReactNativeFlipper
+ com.qrcodescannerapp.ReactNativeFlipper$1
+ com.qrcodescannerapp.ReactNativeFlipper$2
+ com.qrcodescannerapp.ReactNativeFlipper$2$1
+com/qrcodescannerapp/MainActivity.java
+ com.qrcodescannerapp.MainActivity
+com/qrcodescannerapp/BuildConfig.java
+ com.qrcodescannerapp.BuildConfig
+com/qrcodescannerapp/MainApplication.java
+ com.qrcodescannerapp.MainApplication
+ com.qrcodescannerapp.MainApplication$1
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList

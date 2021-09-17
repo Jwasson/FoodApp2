@@ -1,0 +1,14 @@
+com/reactnativeqrcode/BuildConfig.java
+ com.reactnativeqrcode.BuildConfig
+com/reactnativeqrcode/ReactNativeFlipper.java
+ com.reactnativeqrcode.ReactNativeFlipper
+ com.reactnativeqrcode.ReactNativeFlipper$1
+ com.reactnativeqrcode.ReactNativeFlipper$2
+ com.reactnativeqrcode.ReactNativeFlipper$2$1
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList
+com/reactnativeqrcode/MainActivity.java
+ com.reactnativeqrcode.MainActivity
+com/reactnativeqrcode/MainApplication.java
+ com.reactnativeqrcode.MainApplication
+ com.reactnativeqrcode.MainApplication$1
