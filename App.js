@@ -12,6 +12,8 @@ import {
   Button,
 } from 'react-native';
 
+//import auth from '@react-native-firebase/auth';
+
 import {createAppContainer, createSwitchNavigator} from 'react-navigation';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -31,6 +33,7 @@ console.ignoredYellowBox = ['Warning:'];
 
 import LoginScreen from './LoginScreen';
 import CalScreen from './CalScreen';
+import BarcodeScreen from './BarcodeScreen';
 //import { version } from 'react';
 
 
@@ -47,6 +50,7 @@ import LoadingScreen from './LoadingScreen';
 const PageNavigator = createSwitchNavigator({
     LoginScreen: LoginScreen,
     CalScreen: CalScreen,
+    BarcodeScreen: BarcodeScreen,
     LoadingScreen: LoadingScreen,
     //BarcodeScanner: BarcodeScanner,
 })

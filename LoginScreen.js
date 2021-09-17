@@ -24,7 +24,7 @@ import {
 import { NavigationContext } from 'react-navigation';
 
 
-import CalScreen from './CalScreen';
+import BarcodeScreen from './BarcodeScreen';
 
 
 const styles = StyleSheet.create({
@@ -123,35 +123,12 @@ function LoginScreen ({navigation}) {
             <Button title = "Sign In With Google"
              onPress = {()=> signInWithGoogle()}
             />
-            <Button title = "Press This After Login"
-             onPress = {()=> navigation.navigate('CalScreen')}
+            <Button title = "Login"
+             onPress = {()=> navigation.navigate('BarcodeScreen')}
             />
         </View>
     );
-/*
-    return (
-        <>
-          <StatusBar barStyle="dark-content" />
-          <SafeAreaView>
-            <ScrollView
-              contentInsetAdjustmentBehavior="automatic"
-              style={styles.scrollView}>
-              <Header />
-    
-              <View style={styles.titles}>
-                <View style={styles.container}>
-                  <GoogleSigninButton
-                    style={{width: 192, height: 48}}
-                    size={GoogleSigninButton.Size.Wide}
-                    color={GoogleSigninButton.Color.Dark}
-                    onPress={this._signIn}
-                  />
-                </View>
-              </View>
-            </ScrollView>
-          </SafeAreaView>
-        </>
-    );*/
+
 
 }
 

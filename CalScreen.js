@@ -70,6 +70,8 @@ const CalScreen = () => {
             <Text style = {styles.titles}>{"Servings: "+serving}</Text>
             <Text style = {styles.titles}>{"Kcals: "+serving*calories}</Text>
             
+            
+            
        </View>
         //fetchCal()//.then(response => console.log(response));
    );
