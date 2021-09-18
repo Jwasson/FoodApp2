@@ -16,7 +16,7 @@ import {
 
 import {createAppContainer, createSwitchNavigator} from 'react-navigation';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 //import auth from '@react-native-firebase/auth';
 //import { initializeApp } from 'firebase/app';
 //import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
@@ -46,26 +46,31 @@ import LoadingScreen from './LoadingScreen';
     firebase.app(); // if already initialized, use that one
  }*/
 
-
+/*
 const PageNavigator = createSwitchNavigator({
     LoginScreen: LoginScreen,
     CalScreen: CalScreen,
     BarcodeScreen: BarcodeScreen,
     LoadingScreen: LoadingScreen,
     //BarcodeScanner: BarcodeScanner,
-})
+})*/
 
-const AppNavigator = createAppContainer (PageNavigator);
+//const AppNavigator = createAppContainer (PageNavigator);
+const Stack = createNativeStackNavigator();
 
 
 export default class App extends Component {
 
     render() {
         return (
-            /*<View> 
-                jhhjb
-            </View>*/
-            <AppNavigator />
+            //<AppNavigator />
+          <NavigationContainer>
+            <Stack.Navigator>
+              <Stack.Screen name="LoginScreen" component={LoginScreen} />
+              <Stack.Screen name="CalScreen" component={CalScreen} />
+              <Stack.Screen name="BarcodeScreen" component={BarcodeScreen} />
+            </Stack.Navigator>
+          </NavigationContainer>
         );
     }
 

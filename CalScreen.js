@@ -1,4 +1,8 @@
 import React, {Component, useEffect, useState} from 'react';
+import {createAppContainer, createSwitchNavigator} from 'react-navigation';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import 'react-native-gesture-handler';
 //import type {Node} from 'react';
 import {
   SafeAreaView,
@@ -13,13 +17,19 @@ import {
 } from 'react-native';
 
 
-const CalScreen = () => {
-    //console.log("test")
+function CalScreen ({route, navigation}) {
+//class CalScreen extends Component {
+    //render(){
+
     const [scanBool, setScan] = useState(true);
-    const [FDC_ID, setID] = useState(false);
+    //const [FDC_ID, setID] = useState(false);
     const [serving, setServing] = useState(false);
     const [calories, setCalories] = useState(false);
     const [foodName, setName] = useState(false);
+    //const {params} = this.props.navigation.state;
+    const {ScannedID} = route.params;
+    //const ScannedID = '1648210';
+
     const styles = StyleSheet.create({
         input: {
         position: 'absolute', top: 89, left: 155, right: 0, bottom: 20,
@@ -80,21 +90,23 @@ const CalScreen = () => {
         },
     });
 
- 
-    fetch('https://api.nal.usda.gov/fdc/v1/foods/search?fdcIds=1648210&pageSize=2&api_key=Ub5JJ3ntwgh8CH1ILyobzVwTQE6SZ8WUovgdaecM')
+
+    //fetch("https://api.nal.usda.gov/fdc/v1/foods?fdcIds="+ScannedID+"&pageSize=2&api_key=Ub5JJ3ntwgh8CH1ILyobzVwTQE6SZ8WUovgdaecM")
+    fetch('https://api.nal.usda.gov/fdc/v1/foods?fdcIds=1648210&pageSize=2&api_key=Ub5JJ3ntwgh8CH1ILyobzVwTQE6SZ8WUovgdaecM')
         .then((response) => response.json())
         .then((json) => {
             //console.log(json)
             //you have to set calories here
             try{
-                setCalories(json["foods"][0]["foodNutrients"][3]["value"]);
-                setName(json["foods"][0]["description"]);
+                setCalories(json[0]["foodNutrients"][6]["nutrient"]['number']);
+                setName(json[0]["description"]);
             }
             catch(error){
                 console.error(error);
             }
         });
         
+           // <Text style = {styles.titles2}>{"FDC: "+ScannedID}</Text>
 
 
    return (
@@ -108,18 +120,11 @@ const CalScreen = () => {
             />
             <Text style = {styles.titles2}>{"Ingredient Name: "+foodName}</Text>
             <Text style = {styles.titles3}>{"Servings: "+serving}</Text>
-            <Text style = {styles.titles4}>{"Kcals: "+serving*calories}</Text>
-            
-            
-            
+            <Text style = {styles.titles4}>{"Kcals: "+serving*calories}</Text>  
        </View>
-        //fetchCal()//.then(response => console.log(response));
    );
 
-   
 }
 
 
 export default CalScreen;
-
-
