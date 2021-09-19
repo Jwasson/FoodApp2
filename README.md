@@ -39,7 +39,8 @@ Issues:
       Since firebase doesn't recognize a User, path navigation isn't as smooth and a button was required to move to the next page.
       
     
-    User input for FDC ID couldn't be passed to a fetch call in real time, didn't spend too much time trying to fix this since the Barcode scanner was the main idea.
+    User input for FDC ID couldn't be passed to a fetch call in real time, didn't spend too much time trying to fix this since the Barcode scanner was the main idea. I could've done this using react navigation to pass the query like i ended up doing for the barcode scanner.
+  
     
     
     
