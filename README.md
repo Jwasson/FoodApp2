@@ -1,5 +1,14 @@
 # FoodApp2
-
+ Please refer to New Screen Record .mpf for a video of final version of app.
+ 
+ Gmail: asks user to log in and authenticates that they have a valid google mail account.
+ 
+ App connects to the camera of the phone and is granted permission. 
+ 
+ Barcode Scanner scans different verisons of barcodes and provides the url associated and the barcode #. Initial version of the barcode scanner crashes.
+ 
+ Asks user for amount of servings and displays calories at real time as serving amount is changed.
+ 
 
 Design Decisions:
 
