@@ -26,10 +26,6 @@ Design Decisions:
       This would be to help setup firebase
 
 
-    App:
-      This is the main screen that just deals with 
-
-
 
 Issues:
 
